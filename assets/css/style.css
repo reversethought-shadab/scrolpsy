@@ -1,0 +1,194 @@
+*::selection{
+    background-color: var(--salmon);
+}
+:root{
+    --black:#000;
+    --white:#fff;
+    --salmon:#EF9D71;
+    --black:#000;
+    --seagreen:#b0fa66;
+    --cyan:#AEDEE0;
+    --seagreen-dark:#1a2d06;
+    --machina: 'Machina', sans-serif;
+    --druk: 'Druk', sans-serif;
+    --abadi: 'Abadi', sans-serif;
+    --copper: 'Copper', sans-serif;
+}
+body{
+  transition: background-color ease-out .5s;
+}
+.video{
+  clip-path: circle(var(--clip) at 50% 50%);
+}
+body[theme="black"] {
+background-color: var(--black);
+}
+body[theme="salmon"] {
+background-color: var(--salmon);
+}
+body[theme="cyan"] {
+background-color: var(--cyan);
+}
+body[theme="light"] {
+background-color: var(--white);
+}
+body[theme="seagreen"] {
+background-color: var(--seagreen);
+}
+body[theme="black"] .section{
+color: var(--white);
+}
+body[theme="salmon"] .section{
+color: var(--black);
+
+}
+body[theme="light"] .section{
+color: var(--black);
+}
+body[theme="seagreen"] .section{
+color: var(--seagreen-dark);
+}
+body[theme="cyan"] .section{
+color: var(--black);
+}
+@font-face {
+    font-family: Machina;
+    src: url(../font/machina.ttf);
+  }
+@font-face {
+    font-family: Druk;
+    src: url(../font/Druk-Heavy.woff2);
+  }
+@font-face {
+    font-family: Copper;
+    src: url(../font/copperplate-b-webfont.woff2);
+  }
+@font-face {
+    font-family: Abadi;
+    src: url(../font/abadi-mt-condensed-light-webfont.woff2);
+  }
+  .animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 30px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: var(--black);
+    box-shadow: 0 0 0 2px var(--black);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: var(--black);
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .arr-1 {
+    right: 16px;
+  }
+  
+  .animated-button .arr-2 {
+    left: -25%;
+  }
+  
+  .animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: var(--black);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: var(--seagreen);
+    border-radius: 12px;
+  }
+  
+  .animated-button:hover .arr-1 {
+    right: -25%;
+  }
+  
+  .animated-button:hover .arr-2 {
+    left: 16px;
+  }
+  
+  .animated-button:hover .text {
+    transform: translateX(12px);
+  }
+  
+  .animated-button:hover svg {
+    fill: var(--seagreen);
+  }
+  
+  .animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px --black;
+  }
+  
+  .animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+  }
+  .cards__list {
+    padding-top: 38.59rem;
+}
+
+.card-items{
+    border:2px solid black;
+    margin: 12px 0;
+}
+/* .card-items:hover{
+    background-color: var(--black);
+    color: var(--seagreen);
+} */
+.svg{
+    height: 120px;
+}
+.card-left>p{
+    width: 80%;
+}
+
+.our-team{
+  background: url(../images/texture.png) no-repeat 50% 50% 1250px auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 140px;
+    padding-top: 3px;
+    letter-spacing: .01em;
+}
+.our-team:not(.no-bg) {
+  color: transparent;
+  background-color: #000;
+}
+.our-team {
+  background: url(../images/texture.png) no-repeat 50% 50% / 1250px auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
